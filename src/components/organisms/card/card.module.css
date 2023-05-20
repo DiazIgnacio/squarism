@@ -1,9 +1,9 @@
 .card {
-  @apply bg-white bg-opacity-5 rounded-md shadow p-4 relative overflow-hidden h-full;
+  @apply relative h-full overflow-hidden rounded-md bg-white bg-opacity-5 p-4 shadow;
 }
 
 .content {
-  @apply flex flex-col h-full;
+  @apply flex h-full flex-col;
 }
 
 .title {
@@ -11,7 +11,7 @@
 }
 
 .description {
-  @apply mt-2 text-base text-gray-300 flex-1;
+  @apply mt-2 flex-1 text-base text-gray-300;
 }
 
 .iconContainer {
@@ -27,5 +27,5 @@
 }
 
 .callToActionElement {
-  @apply text-white font-bold transition tracking-wide hover:text-blue-400;
+  @apply font-bold tracking-wide text-white transition hover:text-blue-400;
 }

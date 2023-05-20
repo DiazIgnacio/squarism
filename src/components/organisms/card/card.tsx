@@ -1,12 +1,12 @@
-import { forwardRef, ComponentProps } from "react";
+import { forwardRef, ComponentProps } from 'react';
 
-import styles from "./card.module.css";
+import styles from './card.module.css';
 
 export interface CardProps
-  extends Omit<ComponentProps<"div">, "className" | "children"> {
+  extends Omit<ComponentProps<'div'>, 'className' | 'children'> {
   title: string;
   description: string;
-  Icon: (props: ComponentProps<"svg">) => JSX.Element;
+  Icon: (props: ComponentProps<'svg'>) => JSX.Element;
   href: string;
 }
 
@@ -35,7 +35,7 @@ const Card = forwardRef<HTMLDivElement, CardProps>(
         </div>
       </div>
     );
-  }
+  },
 );
 
 export default Card;

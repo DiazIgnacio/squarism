@@ -1,13 +1,13 @@
-import { ComponentProps, forwardRef, useMemo, useState } from "react";
+import { ComponentProps, forwardRef, useMemo, useState } from 'react';
 import {
   CheckCircleIcon,
   DocumentDuplicateIcon,
-} from "@heroicons/react/24/outline";
+} from '@heroicons/react/24/outline';
 
-import styles from "./copy-button.module.css";
+import styles from './copy-button.module.css';
 
 interface Props
-  extends Omit<ComponentProps<"div">, "className" | "onClick" | "title"> {
+  extends Omit<ComponentProps<'div'>, 'className' | 'onClick' | 'title'> {
   text: string;
 }
 
@@ -20,9 +20,9 @@ const CopyButton = forwardRef<HTMLDivElement, Props>(
 
     const Icon = useMemo(
       () => (copied ? CheckCircleIcon : DocumentDuplicateIcon),
-      [copied]
+      [copied],
     );
-    const title = copied ? "Copied" : "Click to copy to clipboard";
+    const title = copied ? 'Copied' : 'Click to copy to clipboard';
 
     return (
       <div
@@ -35,7 +35,7 @@ const CopyButton = forwardRef<HTMLDivElement, Props>(
       >
         <span className={styles.buttonInner}>
           <span className={styles.dollar} aria-hidden="true">
-            ${" "}
+            ${' '}
           </span>
           {text}
         </span>
@@ -45,7 +45,7 @@ const CopyButton = forwardRef<HTMLDivElement, Props>(
         </div>
       </div>
     );
-  }
+  },
 );
 
 export default CopyButton;
